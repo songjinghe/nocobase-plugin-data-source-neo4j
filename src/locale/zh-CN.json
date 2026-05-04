@@ -1,0 +1,4 @@
+{
+  "displayName": "Data Source: External Neo4j",
+  "description": "通过 Bolt 协议连接外部 Neo4j 4.4 数据库，支持自定义 Cypher 查询与数据修改。"
+}

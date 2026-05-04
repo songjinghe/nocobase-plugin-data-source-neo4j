@@ -1,0 +1,4 @@
+{
+  "displayName": "Data Source: External Neo4j",
+  "description": "Connect to an external Neo4j 4.4 database via Bolt protocol and run custom Cypher queries."
+}

@@ -1,0 +1,58 @@
+{
+  "name": "@dbmy/plugin-data-source-neo4j",
+  "displayName": "Data Source: External Neo4j",
+  "description": "Connect to an external Neo4j 4.4 database via Bolt protocol and run custom Cypher queries.",
+  "description-zh-CN": "通过 Bolt 协议连接外部 Neo4j 4.4 数据库，支持自定义 Cypher 查询与数据修改。",
+  "version": "1.0.0",
+  "main": "dist/server/index.js",
+  "files": [
+    "dist",
+    "server.js",
+    "server.d.ts",
+    "client.js",
+    "client.d.ts",
+    "src/locale",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbmy/nocobase-plugin-neo4j.git"
+  },
+  "author": {
+    "name": "songjinghe",
+    "url": "https://github.com/songjinghe"
+  },
+  "peerDependencies": {
+    "@nocobase/client": "1.x || 2.x",
+    "@nocobase/data-source-manager": "1.x || 2.x",
+    "@nocobase/plugin-data-source-manager": "1.x || 2.x",
+    "@nocobase/server": "1.x || 2.x",
+    "@nocobase/test": "1.x || 2.x"
+  },
+  "dependencies": {
+    "neo4j-driver": "^5.28.3"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "Data sources",
+    "Neo4j",
+    "Cypher",
+    "Graph database",
+    "NocoBase"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "npx tsc --project tsconfig.server.json",
+    "build:client": "npx tsc --project tsconfig.client.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  }
+}
